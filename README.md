@@ -66,7 +66,7 @@ Replace `./videos/demo.mp4` with the actual path to your video.
 - **ReactMarkdown** for Markdown rendering
 - **Custom CSS** for animations and themes
 - **Node.js** (backend)
-
+- **Google Firebase** (Database and authentication)
 ## License
 
 This project is licensed under the MIT License.
