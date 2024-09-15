@@ -14,7 +14,7 @@ This is a React-based AI chatbot that integrates Markdown formatting and allows 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/your-repo.git
+   git clone https://github.com/khushalrajoria/AIcostumer-support.git
    ```
 
 2. Navigate to the project directory:
@@ -43,22 +43,6 @@ Click on the theme toggle button at the top-right corner to switch between light
 ### Markdown Support
 
 The bot's responses are formatted with Markdown. For example, it can display **bold text**, *italics*, `code`, and lists.
-
-## Demo
-
-You can include a video demonstrating the chatbot’s features. To embed a video from your PC, follow these steps:
-
-1. Upload the video file to your project directory (e.g., inside a folder called `videos`).
-2. Embed the video in this README using the following HTML:
-
-   ```html
-   <video width="600" controls>
-     <source src="./videos/demo.mp4" type="video/mp4">
-     Your browser does not support the video tag.
-   </video>
-   ```
-
-Replace `./videos/demo.mp4` with the actual path to your video.
 
 ## Technologies Used
 
