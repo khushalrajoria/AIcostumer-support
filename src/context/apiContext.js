@@ -1,4 +1,4 @@
-const url=`${import.meta.env.API_URL}/api`
+const url=`${import.meta.env.VITE_API_URL}/api`
 
 export const apiContext = {
   getChatsUrl: `${url}/chatbot/getallchats`,
