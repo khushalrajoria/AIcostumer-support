@@ -14,11 +14,10 @@ import {
 } from "firebase/firestore";
 
 const signup = async (name, email, password) => {
+  console.log("signing up", email, password)
   try {
     if (!name || !email || !password) {
-      throw (error = {
-        message: " Mandatory Fields Missing",
-      });
+      throw new Error("Mandatory Fields Missing")
     } else {
       const userRecord = await createUserWithEmailAndPassword(
         auth,
@@ -47,6 +46,7 @@ const signup = async (name, email, password) => {
 };
 
 const login = async (email, password) => {
+  console.log("logging in", email, password)
   try {
     if (!email || !password) {
       throw (error = {
@@ -55,6 +55,12 @@ const login = async (email, password) => {
     }
     const user = await signInWithEmailAndPassword(auth, email, password);
     const token = await user.user.getIdToken();
+    console.log({
+      type: "Success",
+      user:user.user,
+      token: token,
+      message: "Sign In Successful",
+    })
     return {
       type: "Success",
       user:user.user,
