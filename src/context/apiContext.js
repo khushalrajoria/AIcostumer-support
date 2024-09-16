@@ -1,5 +1,7 @@
 const url=`${import.meta.env.VITE_API_URL}/api`
 
+console.log(url)
+
 export const apiContext = {
   getChatsUrl: `${url}/chatbot/getallchats`,
   chatUrl:`${url}/chatbot/chat`,
