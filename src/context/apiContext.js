@@ -1,4 +1,4 @@
-const url="http://127.0.0.1:3000/api"
+const url=`${import.meta.env.API_URL}/api`
 
 export const apiContext = {
   getChatsUrl: `${url}/chatbot/getallchats`,
