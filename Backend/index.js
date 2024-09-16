@@ -2,9 +2,12 @@ import express, { urlencoded } from "express";
 import chatbotRouter from "./routers/chatbotRoutes.js";
 import authRouter from "./routers/authRoutes.js";
 import cors from "cors"
-const app = express();
-const PORT = 3000;
+import { config } from "dotenv"
 
+config()
+
+const app = express();
+const PORT = parseInt(process.env.PORT) || 3000;
 
 app.use(express.json({urlencoded:true}))
 app.use(cors());
