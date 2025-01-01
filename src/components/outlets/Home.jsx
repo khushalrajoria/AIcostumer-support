@@ -31,12 +31,12 @@ const Home = () => {
   };
   useEffect(() => {
     const fetchChatData = async () => {
-      const data = await useData(token); // Load data using your chatHook
+      const data = await useData(token);
       if (data) {
         console.log(data)
         setChat(data);
       } else {
-        setChat([]); // Set chat as empty array if no data
+        setChat([]); 
       }
     };
 
@@ -79,7 +79,6 @@ const Home = () => {
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === "Enter") {
-        // Find the button by its ID and trigger a click event
         const submitButton = document.getElementById("submitButton");
         if (submitButton) {
           submitButton.click();
@@ -87,8 +86,6 @@ const Home = () => {
       }
     };
     document.addEventListener("keypress", handleKeyPress);
-
-    // Cleanup the event listener on component unmount
     return () => {
       document.removeEventListener("keypress", handleKeyPress);
     };

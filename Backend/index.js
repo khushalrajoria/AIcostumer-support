@@ -11,11 +11,12 @@ const PORT = parseInt(process.env.PORT) || 3000;
 
 app.use(express.json())
 app.use(cors());
+// app.use((req,res)=>{console.log(req.body)}) 
 app.use("/api/chatbot", chatbotRouter);
 app.use("/api/auth", authRouter);
-// app.use("*", (req, res) => {
-//   res.send("Welcome to API's");
-// });
+app.use("*", (req, res) => {
+  res.send("Welcome to API's");
+});
 
 app.listen(PORT, (err) => {
   if (err) {
